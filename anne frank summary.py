@@ -1,0 +1,60 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[6]:
+
+
+from gensim.summarization import keywords
+
+
+# In[7]:
+
+
+def get_keywords(s):
+    kw=keywords(s).split('\n')
+    return kw
+
+
+# In[15]:
+
+
+s="The Diary of a Young Girl, also known as The Diary of Anne Frank, is a book of the writings from the Dutch language diary kept by Anne Frank while she was in hiding for two years with her family during the Nazi occupation ' +'of the Netherlands. The family was apprehended in 1944, and Anne Frank died of typhus in the Bergen-Belsen concentration camp in 1945. The diary was retrieved by Miep Gies, who gave it to Anne's father,' +' Otto Frank, the family's only known survivor, just after the war was over. The diary has since been published in more than 60 languages.First published under the title Het Achterhuis.Dagboekbrieven 14 Juni 1942 – 1 Augustus 1944 (The Annex: Diary Notes 14 June 1942 – 1 August 1944) by Contact Publishing in Amsterdam in 1947, the diary received'+' widespread critical and popular attention on the appearance of its English language translation Anne Frank: The Diary of a Young Girl by Doubleday & Company (United States) and Vallentine Mitchell (United Kingdom) in 1952.'+' Its popularity inspired the 1955 play The Diary of Anne Frank by the screenwriters Frances Goodrich and Albert Hackett, which they adapted for the screen for the 1959 movie version. The book is included in several lists of the '+'top books of the 20th century.[1][2][3][4][5][6]The copyright of the Dutch version of the diary, published in 1947, expired on 1 January 2016, 70 years after the author death as a result of a general rule in copyright law of the European '+'Union. Following this, the original Dutch version was made available online During the Nazi occupation of the Netherlands, Anne Frank received a blank diary as one of her presents on June 12, 1942, her 13th birthday According to the Anne Frank House,'+'the red, checkered autograph book which Anne used as her diary was actually not a surprise, since she had chosen it the day before with her father when browsing a bookstore near her home.[9] She began to write in it on June 14, 1942, two days later On July 5, 1942, Anne older sister'+'Margot received an official summons to report to a Nazi work camp in Germany, and on July 6, Margot and Anne went into hiding with their father Otto and mother Edith. They were joined by Hermann van Pels, Otto business partner, including his wife Auguste and their teenage son Peter.[12] Their hiding place was in the'+' sealed-off upper rooms of the annex at the back of Otto company building in Amsterdam.[12][13] Otto Frank started his business, named Opekta, in 1933. He was licensed to manufacture and sell pectin, a substance used to make jam. He stopped running his business while everybody was in hiding.'+'But once he returned, he found his employees running it. The rooms that everyone hid in were concealed behind a movable bookcase in the same building as Opekta. Mrs. van Pels dentist, Fritz Pfeffer, joined them four months later. In the published version, names were changed: The van Pelses are known as the Van Daans, and Fritz Pfeffer as Albert Dussel. With the assistance of a group '+'of Otto Frank trusted colleagues, they remained hidden for two years and one month.In August 1944, they were discovered and deported to Nazi concentration camps. They were long thought to have been betrayed, although there are indications that their discovery may have been accidental, that the police raid had actually '+'targeted ration fraud.[14] Of the eight people, only Otto Frank, the oldest, survived the war. '+'Anne died when she was 15 years old in Bergen-Belsen, from typhus. The exact date of her death is unknown, and has long been believed to be in early March, a few weeks before the prisoners were liberated by British troops in April 1945. However, research in 2015 indicated that Anne may have died in February.[15]In the manuscript,'+'her original diaries are written over three extant volumes. The first volume (the red-and-white checkered autograph book) covers the period between June 14 and December 5, 1942. Since the second surviving volume (a school exercise book) begins on December 22, 1943, and ends on April 17, 1944, it is assumed that the original volume or volumes between December 1942 and December 1943 were lost - presumably after the arrest, when the hiding place was emptied on Nazi instructions.'+'However, this missing period is covered in the version Anne rewrote for preservation. The third existing volume (which was also a school exercise book) contains entries from April 17 to August 1, 1944, when Anne wrote for the last time before her arrest.[16]:2The manuscript, written on loose sheets of paper, was found strewn on the floor of the hiding place by Miep Gies and Bep Voskuijl after the family arrest,[17] but before'+'their rooms were ransacked by the Dutch police and the Gestapo. They were kept safe, and given to Otto Frank after the war, with the original notes, when Anne death was confirmed in the spring of 1945"
+
+
+# In[16]:
+
+
+p=get_keywords(s)
+
+
+# In[17]:
+
+
+print(s)
+
+
+# In[18]:
+
+
+from gensim.summarization.summarizer import summarize
+
+
+# In[19]:
+
+
+def get_summarize(k):
+    s=summarize(k)
+    return k
+
+
+# In[20]:
+
+
+summarize(text=s,word_count=300)
+
+
+# In[ ]:
+
+
+
+
